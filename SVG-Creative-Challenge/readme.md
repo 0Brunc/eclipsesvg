@@ -7,7 +7,7 @@ This project makes use of masks, it changes coordinates, colours and oppacities 
 
 There's a woman looking out the window of a building while a annular solar eclipse occurs.
 
-(This version is a more complete than what was delivered, I didn´t have much time but later on I finished what I couldn´t do)
+(This version is a more complete version than what was delivered, I just finished what I couldn´t do)
 
 ## Animations
 
