@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun Eclipse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <svg viewBox="0 0 1920 1080">
+      <!-- Background -->
+      <title>The sky</title>
+      <desc>The sky changes from a light blue to a darker tone while the sun eclipse happens.</desc>
+      <rect x="0" y="0" width="1920" height="1080" fill="rgb(111, 193, 212)" id="sky" />
+      <g>
+        <!-- Sun Radient-->
+        <title>Sun eclipse</title>
+        <defs>
+          <radialGradient id="sun-gradient" cx="1700" cy="150" r="140" gradientUnits="userSpaceOnUse">
+            <stop offset="60%" stop-color="rgb(255, 123, 0)" />
+            <stop offset="70%" stop-color="rgb(191 72 3)" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="orange" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="1700" cy="150" r="300" fill="url(#sun-gradient)" id="sun-gradient-a" />
+        <!-- Sun -->
+        <defs>
+          <mask id="sun-mask">
+            <circle cx="1700" cy="150" r="90" stroke="none" fill="white" />
+          </mask>
+        </defs>
+        <circle cx="1700" cy="150" r="90" stroke="none" fill="rgb(255 218 0)" mask="url(#sun-mask)" id="sun" />
+        <circle cx="1880" cy="150" r="82" stroke="none" fill="black" mask="url(#sun-mask)" id="sun-eclipse" />
+      </g>
+      <rect x="0" y="0" width="960" height="1080" fill="rgb(240, 234, 205)" id="building" /> <!-- Bulding -->
+      <rect x="205" y="0" width="550" height="100" fill="rgb(53 53 60)" class="windows" /> <!-- Top Window -->
+      <rect x=" 205" y="980" width="550" height="100" fill="rgb(53 53 60)" class="windows" /> <!-- Bottom Window -->
+      <!-- Main Window -->
+      <g>
+        <title>Woman looking out a window.</title>
+        <desc>Woman with black wavy hair and green shirt, in a room with blue walls and a light on the ceiling looking
+          out the window</desc>
+        <!-- Main Window Mask-->
+        <defs>
+          <mask id="window-mask">
+            <rect x="205" y="270" width="550" height="550" fill="white" />
+          </mask>
+        </defs>
+        <!-- Room background-->
+        <defs>
+          <radialGradient id="room-gradient" cx="480" cy="545" r="700" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="rgb(16, 93,  153)" />
+            <stop offset="30%" stop-color="rgb(14, 72, 130)" stop-opacity="1" />
+            <stop offset="100%" stop-color="rgb(8, 45, 81)" stop-opacity="1" />
+          </radialGradient>
+        </defs>
+        <!-- Window frame -->
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#room-gradient)" mask="url(#window-mask)" />
+        <!-- Light -->
+        <path d="M555,225
+        L355,225
+        L355,285
+        C405,325 505,325 555,285
+        Z" fill="rgb(255 243 181)" mask="url(#window-mask)" />
+
+        <!-- Woman -->
+        <g>
+          <!-- Neck -->
+          <rect x="330" y="650" width="45" height="100" fill="rgb(242, 212, 196)" mask="url(#window-mask)" />
+          <!-- Face -->
+          <ellipse cx="360" cy="610" rx="90" ry="85" fill="rgb(249, 221, 204)" stroke-width="5" />
+          <circle cx="410" cy="615" r="10" stroke="none" fill="black" />
+          <!-- Blouse -->
+          <g>
+            <rect id="blouse-neck" x="330" y="720" width="70" height="100" fill="GREEN" rx="20" ry="20"
+              mask="url(#window-mask)" />
+            <ellipse id="blouse-chest" cx="370" cy="820" rx="50" ry="70" fill="GREEN" stroke-width="5"
+              mask="url(#window-mask)" />
+          </g>
+          <!-- Hair -->
+          <path d="M400,598
+            C490,580 425,450 290,510
+            C260,520 225,550 220,600
+            C230,690 200,660 210,720
+            C240,825 130,820 170,840
+            L340,840
+            C390,770 335,775 340,655
+            C295,650 320,595 340,620
+            C370,605 380,590 380,570
+            C380,550 400,560 385,600
+            Z" mask="url(#window-mask)" />
+        </g>
+        <!-- Room "Light"-->
+        <g id="room-shadow">
+          <title>Light gradient for the room</title>
+          <defs>
+            <radialGradient id="room-shadow-gradient" cx="460" cy="270" r="550" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="black" stop-opacity="0" id="stop1" />
+              <stop offset="50%" stop-color="black" stop-opacity="0.2" id="stop2" />
+              <stop offset="100%" stop-color="black" stop-opacity="0.7" id="stop3" />
+            </radialGradient>
+          </defs>
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#room-shadow-gradient)" mask="url(#window-mask)" />
+        </g>
+      </g>
+    </svg>
+  </main>
+</body>
+
+</html>
