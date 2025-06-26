@@ -9,8 +9,6 @@ This project makes use of masks, it changes coordinates, colours and oppacities 
 
 There's a woman looking out the window of a building while a annular solar eclipse occurs.
 
-(This version is a more complete version than what was delivered, I just finished what I couldn´t do)
-
 ## Animations
 
 - Sun eclipse (moon passing in front of the sun)
